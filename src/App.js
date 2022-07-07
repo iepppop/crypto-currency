@@ -4,16 +4,22 @@ import styled from 'styled-components';
 import Header from './components/Header';
 import GlobalStyle from './components/GlobalStyle';
 import Banner from './components/Banner';
+import Carousel from './components/Carousel';
+import "react-alice-carousel/lib/alice-carousel.css";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
+    <BrowserRouter>
     <Wrap>
       <GlobalStyle />
       <Contain>
         <Header />
         <Banner />
+        <Carousel />
       </Contain>
     </Wrap>
+    </BrowserRouter>
   );
 }
 

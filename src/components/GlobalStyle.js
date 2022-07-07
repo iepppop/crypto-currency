@@ -8,6 +8,11 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
   }
 
+  a{
+    color:#fff;
+    text-decoration:none;
+  }
+
   body {
     font-family: "Helvetica", "Arial", sans-serif;
     width:100%;
