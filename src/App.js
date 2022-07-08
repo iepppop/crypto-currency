@@ -7,6 +7,7 @@ import Banner from './components/Banner';
 import Carousel from './components/Carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import CoinsTable from './components/CoinsTable';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Header />
         <Banner />
         <Carousel />
+        <CoinsTable />
       </Contain>
     </Wrap>
     </BrowserRouter>

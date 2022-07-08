@@ -28,7 +28,10 @@ const Carousel = () => {
       items: 2,
     },
     512: {
-      items: 8,
+      items: 4,
+    },
+    1020: {
+      items: 4,
     },
   };
 
@@ -38,14 +41,21 @@ const Carousel = () => {
       <Link to={`/coins/${coin.id}`}>
         <CarouselItem>
         <ItemWrap>
+          <FirstWrap>
+            <ImgWrap>
           <img
             src={coin?.image}
             alt={coin.name}
             height="80"
             stlye={{ marginBotton: 10 }}
           />
+          </ImgWrap>
+          <h1>
+             {coin?.symbol} 
+             </h1>
+          </FirstWrap>
           <span>
-            {coin?.symbol} &nbsp;
+         &nbsp;
             <span
               style={{
                 color: profit > 0 ? "rgb(14,203,129)" : "red",
@@ -74,6 +84,7 @@ const Carousel = () => {
         autoPlayInterval={1000}
         animationDuration={1500}
         disableDotsControls
+        disableButtonsControls
         responsive={responsive}
         autoPlay
         items={items}
@@ -85,34 +96,48 @@ const Carousel = () => {
 export default Carousel;
 
 const Contain = styled.div`
-  width:100%;
+  max-width:1000px;
   margin: 0 auto;
-  height: 100%;
+  height: auto;
   position: relative;
   z-index: 2;
+  border-radius:20px;
+  background:rgba(255,255,255,0.1);
+  border:1px solid rgba(255,255,255,0.2);
 `
 
 const CarouselItem = styled.div`
   padding:10px 10px;
+  
 `
 
 const ItemWrap = styled.div`
-  border-radius:20px;
-  background:rgba(255,255,255,0.1);
-  border:1px solid rgba(255,255,255,0.2);
-  padding:25px 40px;
+
   font-family:'poppins';
   font-size:13px;
 
   h1{
     font-family:'Pretendard';
   }
+`
+const FirstWrap = styled.div`
+  display: flex;
+  align-items:center;
 
-  img{
-    width:40px;
-    height:40px;
-    border-radius:50%;
-    display:block;
-    margin:0 0 20px 0;
+  h1{
+    margin:0 0 0 10px;
+    text-transform:uppercase;
   }
+`
+
+const ImgWrap = styled.div`
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  margin:0 0 20px 0;
+  overflow:hidden;
+  img{
+    height:100%;
+  }
+
 `
