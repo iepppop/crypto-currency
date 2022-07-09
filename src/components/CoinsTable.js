@@ -17,7 +17,17 @@ const CoinsTable = () => {
     }, []);
 
   return (
-    <Container>CoinsTable</Container>
+    <Container>
+      {coins.map((coin)=> {
+        return (
+          <CoinWrap key={coin?.symbol}>
+            <>{coin?.symbol}</>
+            <>{coin?.symbol}</>
+            <>{coin?.symbol}</>
+            <>{coin?.symbol}</>
+          </CoinWrap>
+        )
+      })}</Container>
   )
 }
 export default CoinsTable;
@@ -27,3 +37,6 @@ const Container = styled.div`
     margin: 0 auto;
 `
 
+const CoinWrap = styled.div`
+
+`
