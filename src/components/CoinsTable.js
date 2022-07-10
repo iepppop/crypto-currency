@@ -21,6 +21,12 @@ const CoinsTable = () => {
       {coins.map((coin)=> {
         return (
           <CoinWrap key={coin?.symbol}>
+            <TablTitle>
+              <h1>코인명</h1>
+              <h2>가격</h2>
+              <h3>24시간 가격</h3>
+              <h4>거래량</h4>
+            </TablTitle>
             <>{coin?.symbol}</>
           </CoinWrap>
         )
@@ -35,5 +41,9 @@ const Container = styled.div`
 `
 
 const CoinWrap = styled.div`
+
+`
+
+const TablTitle = styled.div`
 
 `
