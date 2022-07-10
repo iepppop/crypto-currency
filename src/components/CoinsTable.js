@@ -22,9 +22,6 @@ const CoinsTable = () => {
         return (
           <CoinWrap key={coin?.symbol}>
             <>{coin?.symbol}</>
-            <>{coin?.symbol}</>
-            <>{coin?.symbol}</>
-            <>{coin?.symbol}</>
           </CoinWrap>
         )
       })}</Container>
